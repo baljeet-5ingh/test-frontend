@@ -10,7 +10,7 @@ export default function Home() {
     {
       url: "/Alpine.webp",
       ready: true,
-      error: true,
+      error: false,
     },
     {
       url: "/lakee.jpeg",
