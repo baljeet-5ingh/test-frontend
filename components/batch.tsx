@@ -27,8 +27,8 @@ export default function Batch({ props }: { props: BatchProps }) {
     retries--;
   }, [hasError]);
   return (
-      <div className="w-full bg-black px-5 flex items-center gap-10 h-50">
-        <section className=" grid grid-cols-2 gap-5 max-w-50">
+      <div className="w-full bg-black px-5 flex items-center gap-10 h-56">
+        <section className=" grid grid-cols-2 gap-2 h-32 w-32">
           {images.map((i) => {
             // console.log(i)
             if (i.ready == true && i.error == false) {
