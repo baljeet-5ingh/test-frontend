@@ -27,9 +27,8 @@ export default function Batch({ props }: { props: BatchProps }) {
     retries--;
   }, [hasError]);
   return (
-    <div className="h-screen w-screen bg-white p-5">
       <div className="w-full bg-black px-5 flex items-center gap-10 h-50">
-        <div className=" grid grid-cols-2 gap-5 max-w-50">
+        <section className=" grid grid-cols-2 gap-5 max-w-50">
           {images.map((i) => {
             // console.log(i)
             if (i.ready == true && i.error == false) {
@@ -52,21 +51,20 @@ export default function Batch({ props }: { props: BatchProps }) {
               );
             }
           })}
-        </div>
-        <div className="flex-1">
+        </section>
+        <section className="flex-1">
           <p className="text-3xl">
             {name} {count}
           </p>
           <p className="text-gray-300">Moradabad, Uttar Pradesh</p>
-        </div>
-        <div>
+        </section>
+        <section>
           {hasError ? (
             <TriangleAlert className="bg-red-500 p-3 text-white h-15 w-15 rounded-full" />
           ) : (
             <></>
           )}
-        </div>
+        </section>
       </div>
-    </div>
   );
 }
