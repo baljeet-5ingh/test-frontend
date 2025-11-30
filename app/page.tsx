@@ -32,6 +32,13 @@ export default function Home() {
     count,
     images,
   };
+  while (images.length < 4) {
+    images.push({
+      url: "/placeholder.png",
+      ready: true,
+      error: false,
+    });
+  }
   return (
     <main>
       <Batch props={props} />
